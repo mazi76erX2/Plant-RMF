@@ -87,7 +87,7 @@ export default function Contact() {
               <h2 className="text-3xl font-bold mb-6 text-gray-800">Get In Touch</h2>
               <p className="text-lg text-gray-600 mb-10">
                 Whether you have a question about our programs, want to partner with us, or simply want to say hello,
-                we'd love to hear from you! Reach out using any of the methods below.
+                we&apos;d love to hear from you! Reach out using any of the methods below.
               </p>
 
               <div className="space-y-8">

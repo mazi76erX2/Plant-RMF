@@ -27,13 +27,14 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const toggleDropdown = (name: string) => {
-    if (activeDropdown === name) {
-      setActiveDropdown(null);
-    } else {
-      setActiveDropdown(name);
-    }
-  };
+  // Keeping this function for future dropdown menu functionality
+  // const toggleDropdown = (name: string) => {
+  //   if (activeDropdown === name) {
+  //     setActiveDropdown(null);
+  //   } else {
+  //     setActiveDropdown(name);
+  //   }
+  // };
 
   return (
     <div className="relative">

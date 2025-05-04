@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function About() {
   return (
@@ -25,7 +24,7 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold mb-6">What We Do</h2>
               <p className="text-gray-700 mb-4">
-                Food & Trees for Africa (FTFA) is South Africa's pioneering social and environmental enterprise. 
+                Food & Trees for Africa (FTFA) is South Africa&apos;s pioneering social and environmental enterprise. 
                 Since 1990, we have been addressing food security, environmental sustainability, and greening 
                 through extensive and diverse programmes across South Africa.
               </p>
@@ -62,8 +61,8 @@ export default function About() {
             <h2 className="text-3xl font-bold mb-8 text-center">Our Vision</h2>
             <div className="bg-white p-8 rounded-lg shadow-md mb-12">
               <p className="text-xl text-center italic text-gray-700">
-                "A healthier, more food secure, environmentally sound and greener South Africa where people live in 
-                harmony with each other and with the natural environment."
+                &quot;A healthier, more food secure, environmentally sound and greener South Africa where people live in 
+                harmony with each other and with the natural environment.&quot;
               </p>
             </div>
 

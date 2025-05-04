@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function CommunityPlanning() {
@@ -169,7 +168,7 @@ export default function CommunityPlanning() {
               <div className="w-full md:w-2/3">
                 <h3 className="text-xl font-bold mb-3 text-gray-800">Trees for Homes Initiative</h3>
                 <p className="text-gray-600 mb-4">
-                  Through comprehensive community planning, we've helped transform residential areas with strategic tree planting, enhancing environmental quality and community well-being. The project involved detailed mapping of suitable planting locations and community education.
+                  Through comprehensive community planning, we&apos;ve helped transform residential areas with strategic tree planting, enhancing environmental quality and community well-being. The project involved detailed mapping of suitable planting locations and community education.
                 </p>
               </div>
             </motion.div>
