@@ -179,9 +179,9 @@ export default function Contact() {
                       Email
                     </h3>
                     <p className="text-gray-600">
-                      robert@plant-rmf.org.za
+                      robert@plant-rmf.co.za
                       <br />
-                      admin@plant-rmf.org.za
+                      admin@plant-rmf.co.za
                     </p>
                   </div>
                 </div>
@@ -207,7 +207,7 @@ export default function Contact() {
                     <h3 className="text-xl font-semibold mb-1 text-gray-800">
                       Website
                     </h3>
-                    <p className="text-gray-600">www.plant-rmf.org.za</p>
+                    <p className="text-gray-600">www.plant-rmf.co.za</p>
                   </div>
                 </div>
 
