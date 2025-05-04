@@ -7,8 +7,13 @@ import Footer from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Food & Trees for Africa",
-  description: "Pioneering environmental change through food security and greening initiatives across South Africa since 1990.",
+  title: "Robert Mazibuko Foundation",
+  description:
+    "Growing sustainable communities through environmental education and tree planting initiatives across South Africa.",
+  icons: {
+    icon: "/logo-tree.svg",
+    apple: "/logo-tree.svg",
+  },
 };
 
 export default function RootLayout({
@@ -20,9 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
