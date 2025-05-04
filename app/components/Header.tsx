@@ -254,7 +254,7 @@ const Header = () => {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 mr-1"
+                    className="h-5 w-5 mr-2 inline-flex"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -266,7 +266,7 @@ const Header = () => {
                       d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  Donate
+                  <span className="flex-shrink-0">Donate</span>
                 </Link>
                 <Link
                   href="/apply"
@@ -274,7 +274,7 @@ const Header = () => {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 mr-1"
+                    className="h-5 w-5 mr-2 inline-flex"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -286,7 +286,7 @@ const Header = () => {
                       d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
                     />
                   </svg>
-                  Apply
+                  <span className="flex-shrink-0">Apply</span>
                 </Link>
               </div>
             </nav>
@@ -374,7 +374,7 @@ const Header = () => {
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 mr-2"
+                      className="h-5 w-5 mr-2 inline-flex"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -386,15 +386,15 @@ const Header = () => {
                         d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    Donate
+                    <span className="flex-shrink-0">Donate</span>
                   </Link>
                   <Link
                     href="/apply"
-                    className="block px-4 py-2 text-center border border-white text-white hover:bg-white/10 rounded-md font-medium transition-colors flex items-center justify-center"
+                    className="block px-4 py-2 text-center border border-green-700 text-green-700 hover:bg-green-50 rounded-md font-medium transition-colors flex items-center justify-center"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 mr-2"
+                      className="h-5 w-5 mr-2 inline-flex"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -406,7 +406,7 @@ const Header = () => {
                         d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
                       />
                     </svg>
-                    Apply
+                    <span className="flex-shrink-0">Apply</span>
                   </Link>
                 </div>
               </nav>
