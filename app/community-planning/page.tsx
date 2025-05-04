@@ -309,6 +309,68 @@ export default function CommunityPlanning() {
           </motion.div>
         </div>
       </section>
+
+      {/* Image Gallery Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            className="text-3xl font-bold mb-12 text-center text-gray-800"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            Our Community Impact
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <motion.div
+              className="relative h-64 rounded-lg overflow-hidden shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <Image
+                src="/tree-planting.jpg"
+                alt="Community Planting Event"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </motion.div>
+
+            <motion.div
+              className="relative h-64 rounded-lg overflow-hidden shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <Image
+                src="/tree-planting-hands.jpeg"
+                alt="Hands Planting Trees"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </motion.div>
+
+            <motion.div
+              className="relative h-64 rounded-lg overflow-hidden shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <Image
+                src="/trees-wide2.jpg"
+                alt="Community Garden"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -33,7 +33,7 @@ const TreesCarbon = () => {
       <section className="w-full relative py-32 flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/community-tree-planting-hero.jpg"
+            src="/trees-hero.jpg"
             alt="Trees and Carbon"
             fill
             className="object-cover"
@@ -103,7 +103,7 @@ const TreesCarbon = () => {
             >
               <div className="relative h-60">
                 <Image
-                  src="/community-tree-planting-hero.jpg"
+                  src="/tree-plant1.jpg"
                   alt="Community Tree Planting"
                   fill
                   className="object-cover"
@@ -145,7 +145,7 @@ const TreesCarbon = () => {
             >
               <div className="relative h-60">
                 <Image
-                  src="/trees-for-all.jpg"
+                  src="/tree-plants2.jpeg"
                   alt="Trees for Bees"
                   fill
                   className="object-cover"
@@ -187,7 +187,7 @@ const TreesCarbon = () => {
             >
               <div className="relative h-60">
                 <Image
-                  src="/trees-for-homes.jpg"
+                  src="/tree-seedlings.jpg"
                   alt="Carbon Tax Offset"
                   fill
                   className="object-cover"
@@ -323,7 +323,7 @@ const TreesCarbon = () => {
               variants={fadeInUp}
             >
               <Image
-                src="/quote-background.jpg"
+                src="/tree-plant3.jpg"
                 alt="Carbon Offsetting"
                 fill
                 className="object-cover rounded-lg"
@@ -348,7 +348,7 @@ const TreesCarbon = () => {
               variants={fadeInUp}
             >
               <Image
-                src="/community-tree-planting-hero.jpg"
+                src="/tree-planting-men.jpeg"
                 alt="Corporate Volunteering"
                 fill
                 className="object-cover rounded-lg"
