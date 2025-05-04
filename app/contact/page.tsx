@@ -355,7 +355,10 @@ export default function Contact() {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit}>
+              <form
+                onSubmit={handleSubmit}
+                className="[&_::placeholder]:text-gray-500 [&_::placeholder]:opacity-100"
+              >
                 <div className="mb-6">
                   <label
                     htmlFor="name"
@@ -407,9 +410,11 @@ export default function Contact() {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-800"
                   >
-                    <option value="">Select a subject</option>
+                    <option value="" className="text-gray-400">
+                      Select a subject
+                    </option>
                     <option value="General Inquiry">General Inquiry</option>
                     <option value="Partnership Opportunity">
                       Partnership Opportunity
@@ -436,7 +441,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-800"
                     placeholder="How can we help you?"
                   ></textarea>
                 </div>
