@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,6 +15,7 @@ export default function Contact() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -27,26 +29,48 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage("");
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
+      const data = await response.json();
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setErrorMessage(
+          data.error || "Failed to send message. Please try again."
+        );
+      }
+    } catch (error) {
+      setErrorMessage("An error occurred. Please try again later.");
+      console.error("Form submission error:", error);
+    } finally {
+      setIsSubmitting(false);
+
       // Reset submission status after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
+      if (isSubmitted) {
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 5000);
+      }
+    }
   };
 
   return (
@@ -153,7 +177,9 @@ export default function Contact() {
                     <h3 className="text-xl font-semibold mb-1 text-gray-800">
                       Phone
                     </h3>
-                    <p className="text-gray-600">+27 82 597 0232</p>
+                    <p className="text-gray-600">
+                      <a href="tel:+27825970232">+27 82 597 0232</a>
+                    </p>
                   </div>
                 </div>
 
@@ -179,9 +205,13 @@ export default function Contact() {
                       Email
                     </h3>
                     <p className="text-gray-600">
-                      robert@plant-rmf.co.za
+                      <a href="mailto:robert@plant-rmf.co.za">
+                        robert@plant-rmf.co.za
+                      </a>
                       <br />
-                      admin@plant-rmf.co.za
+                      <a href="mailto:admin@plant-rmf.co.za">
+                        admin@plant-rmf.co.za
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -207,7 +237,15 @@ export default function Contact() {
                     <h3 className="text-xl font-semibold mb-1 text-gray-800">
                       Website
                     </h3>
-                    <p className="text-gray-600">www.plant-rmf.co.za</p>
+                    <p className="text-gray-600">
+                      <a
+                        href="https://www.plant-rmf.co.za"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        www.plant-rmf.co.za
+                      </a>
+                    </p>
                   </div>
                 </div>
 
@@ -309,6 +347,13 @@ export default function Contact() {
                   </p>
                 </div>
               ) : null}
+
+              {errorMessage && (
+                <div className="bg-red-100 text-red-700 p-4 rounded-md mb-6">
+                  <p className="font-medium">Error</p>
+                  <p>{errorMessage}</p>
+                </div>
+              )}
 
               <form onSubmit={handleSubmit}>
                 <div className="mb-6">
@@ -421,12 +466,18 @@ export default function Contact() {
               Find Us
             </h2>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden h-96">
-              {/* Insert a map here - for this example, using a placeholder */}
-              <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                <p className="text-gray-600">
-                  Interactive Map Will Be Embedded Here
-                </p>
-              </div>
+              {/* Google Maps iframe */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14438.775901479553!2d29.23102566303919!3d-25.85989489999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9505fdf28fe79d%3A0x827fecbd759ebbbb!2sKwa-Guqa%2C%20Emalahleni%2C%201039%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1658346258963!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Robert Mazibuko Foundation Location"
+                aria-label="Map showing the location of Robert Mazibuko Foundation"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -443,22 +494,46 @@ export default function Contact() {
             community development.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="https://donate.plant-rmf.org.za/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-white text-green-700 rounded-md hover:bg-gray-100 transition-colors font-medium"
+            <Link
+              href="/donate"
+              className="px-6 py-3 bg-white text-green-700 rounded-md hover:bg-gray-100 transition-colors font-medium flex items-center"
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
               Donate Now
-            </a>
-            <a
-              href="https://apply.plant-rmf.org.za"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-md hover:bg-white/10 transition-colors font-medium"
+            </Link>
+            <Link
+              href="/apply"
+              className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-md hover:bg-white/10 transition-colors font-medium flex items-center"
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                />
+              </svg>
               Apply For Support
-            </a>
+            </Link>
           </div>
         </div>
       </section>
