@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function OurTeam() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' }
-    }
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   const staggerContainer = {
@@ -19,9 +19,9 @@ export default function OurTeam() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3
-      }
-    }
+        staggerChildren: 0.3,
+      },
+    },
   };
 
   const teamMembers = [
@@ -42,7 +42,7 @@ export default function OurTeam() {
       credentials: "",
       role: "Secretary | Interim Chief Operations Officer",
       image: "/siddique.jpg",
-    }
+    },
   ];
 
   return (
@@ -51,9 +51,9 @@ export default function OurTeam() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/tree-plants.jpeg" 
-            alt="Our Team" 
-            fill 
+            src="/tree-plants.jpeg"
+            alt="Our Team"
+            fill
             sizes="100vw"
             className="object-cover"
             priority
@@ -61,7 +61,7 @@ export default function OurTeam() {
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
 
-        <motion.div 
+        <motion.div
           className="container mx-auto px-4 relative z-10 text-center text-white"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -69,7 +69,8 @@ export default function OurTeam() {
         >
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Team</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-10">
-            Meet the dedicated professionals leading the Robert Mazibuko Foundation
+            Meet the dedicated professionals leading the Robert Mazibuko
+            Foundation
           </p>
         </motion.div>
       </section>
@@ -84,15 +85,18 @@ export default function OurTeam() {
             variants={fadeInUp}
             className="max-w-3xl mx-auto text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-6 text-gray-800">Leadership Team</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-800">
+              Leadership Team
+            </h2>
             <p className="text-lg text-gray-700">
-              Our team brings together passionate individuals committed to environmental conservation,
-              community development, and sustainable practices. With diverse expertise and a shared vision,
-              we work together to create positive change for our planet and communities.
+              Our team brings together passionate individuals committed to
+              environmental conservation, community development, and sustainable
+              practices. With diverse expertise and a shared vision, we work
+              together to create positive change for our planet and communities.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto"
             initial="hidden"
             whileInView="visible"
@@ -100,13 +104,13 @@ export default function OurTeam() {
             variants={staggerContainer}
           >
             {teamMembers.map((member, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-duration-300"
                 variants={fadeInUp}
               >
                 <div className="relative h-80">
-                  <Image 
+                  <Image
                     src={member.image}
                     alt={member.name}
                     fill
@@ -114,12 +118,20 @@ export default function OurTeam() {
                     className="object-cover object-center"
                     onError={(e) => {
                       // Fallback to a placeholder if image fails to load
-                      e.currentTarget.src = "https://via.placeholder.com/300x400?text=Team+Member";
+                      e.currentTarget.src =
+                        "https://via.placeholder.com/300x400?text=Team+Member";
                     }}
                   />
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold mb-1 text-gray-800">{member.name}{member.credentials && <span className="ml-2 text-green-700">{member.credentials}</span>}</h3>
+                  <h3 className="text-xl font-bold mb-1 text-gray-800">
+                    {member.name}
+                    {member.credentials && (
+                      <span className="ml-2 text-green-700">
+                        {member.credentials}
+                      </span>
+                    )}
+                  </h3>
                   <p className="text-gray-600">{member.role}</p>
                 </div>
               </motion.div>
@@ -138,32 +150,82 @@ export default function OurTeam() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">Legalities and Compliance</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">
+              Legalities and Compliance
+            </h2>
             <div className="bg-white rounded-lg shadow-lg p-8">
               <ul className="space-y-4 text-gray-700">
                 <li className="flex items-start">
-                  <svg className="w-6 h-6 text-green-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg
+                    className="w-6 h-6 text-green-600 mr-2 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
-                  <span><strong>Organization:</strong> Robert Mazibuko Foundation</span>
+                  <span>
+                    <strong>Organization:</strong> Robert Mazibuko Foundation
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-6 h-6 text-green-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg
+                    className="w-6 h-6 text-green-600 mr-2 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
-                  <span><strong>Registration Number:</strong> 314-347 NPO</span>
+                  <span>
+                    <strong>Registration Number:</strong> 314-347 NPO
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-6 h-6 text-green-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg
+                    className="w-6 h-6 text-green-600 mr-2 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
-                  <span><strong>Registration Date:</strong> 05 November 2024</span>
+                  <span>
+                    <strong>Registration Date:</strong> 05 November 2024
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-6 h-6 text-green-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg
+                    className="w-6 h-6 text-green-600 mr-2 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
-                  <span><strong>PBO Number:</strong> Application Pending</span>
+                  <span>
+                    <strong>PBO Number:</strong> Application Pending
+                  </span>
                 </li>
               </ul>
             </div>
@@ -182,11 +244,12 @@ export default function OurTeam() {
           >
             <h2 className="text-3xl font-bold mb-6">Join Our Team</h2>
             <p className="text-xl max-w-3xl mx-auto mb-8">
-              We're always looking for passionate individuals who share our vision of creating a more sustainable future.
+              We&apos;re always looking for passionate individuals who share our
+              vision of creating a more sustainable future.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a 
-                href="mailto:admin@rmf.org.za" 
+              <a
+                href="mailto:admin@rmf.org.za"
                 className="px-6 py-3 bg-white text-green-700 rounded-md hover:bg-gray-100 transition-colors font-medium"
               >
                 Contact Us
@@ -197,4 +260,4 @@ export default function OurTeam() {
       </section>
     </div>
   );
-} 
+}

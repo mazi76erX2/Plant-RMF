@@ -212,7 +212,7 @@ export default function CommunityPlanning() {
           >
             <h2 className="text-3xl font-bold mb-6">Join Our Community Planning Initiatives</h2>
             <p className="text-xl max-w-3xl mx-auto mb-8">
-              Whether you're a community member, organization, or supporter, there are many ways to get involved and make a difference.
+              Whether you&apos;re a community member, organization, or supporter, there are many ways to get involved and make a difference.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a 
