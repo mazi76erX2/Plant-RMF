@@ -191,7 +191,7 @@ export default function Home() {
                 How Does PLANT Operate?
               </h3>
               <p className="text-gray-600 mb-4">
-                PLANT's operation is driven by businesses and executed by
+                PLANT&apos;s operation is driven by businesses and executed by
                 society (stakeholders, customers, employees, communities).
                 BUSINESSES purchase trees, plants, seeds, etc. to be planted by
                 society, while INDIVIDUALS identify planting spaces, plant
