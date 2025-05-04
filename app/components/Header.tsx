@@ -45,7 +45,10 @@ const Header = () => {
       >
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center space-x-4 text-white text-sm">
-            <a href="mailto:admin@rmf.org.za" className="hover:text-gray-200">
+            <a
+              href="mailto:admin@plant-rmf.org.za"
+              className="hover:text-gray-200"
+            >
               <span className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +64,7 @@ const Header = () => {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                admin@rmf.org.za
+                admin@plant-rmf.org.za
               </span>
             </a>
             <a href="tel:+27825970232" className="hover:text-gray-200">
@@ -245,7 +248,7 @@ const Header = () => {
                 </Link>
               </div>
               <a
-                href="https://donate.trees.org.za/"
+                href="https://donate.plant-rmf.org.za/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`px-5 py-2 rounded-md transition-colors shadow-md ${
@@ -257,7 +260,7 @@ const Header = () => {
                 Donate
               </a>
               <a
-                href="https://portal.footprint.africa/apply"
+                href="https://apply.plant-rmf.org.za"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`px-5 py-2 rounded-md transition-colors border-2 shadow-md ${
@@ -347,7 +350,7 @@ const Header = () => {
                   Contact
                 </Link>
                 <a
-                  href="https://donate.trees.org.za/"
+                  href="https://donate.plant-rmf.org.za/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-5 py-2 bg-green-700 text-white rounded-md text-center hover:bg-green-800 transition-colors font-medium"
@@ -355,7 +358,7 @@ const Header = () => {
                   Donate
                 </a>
                 <a
-                  href="https://portal.footprint.africa/apply"
+                  href="https://apply.plant-rmf.org.za"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-5 py-2 border-2 border-green-700 text-green-700 rounded-md text-center hover:bg-green-50 transition-colors font-medium"

@@ -277,7 +277,8 @@ export default function Home() {
                   We want to be completely transparent with you in everything we
                   do from how we plant trees to our everyday operations. So, if
                   you have any questions (or just want to say &apos;hey!&apos;)
-                  please feel free to drop us a message at admin@rmf.org.za
+                  please feel free to drop us a message at
+                  admin@plant-rmf.org.za
                 </p>
               </div>
             </motion.div>
@@ -508,13 +509,13 @@ export default function Home() {
         >
           <h2 className="text-4xl font-bold mb-6">Get In Touch</h2>
           <p className="text-xl max-w-3xl mx-auto mb-10">
-            Get in touch with us at admin@rmf.org.za if you would like to
+            Get in touch with us at admin@plant-rmf.org.za if you would like to
             discuss how planting can be integrated into your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
-                href="https://donate.trees.org.za/"
+                href="https://donate.plant-rmf.org.za/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-8 py-4 bg-white hover:bg-gray-100 text-green-700 font-bold rounded-md text-lg transition-colors shadow-lg border-2 border-white"
@@ -524,7 +525,7 @@ export default function Home() {
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
-                href="https://portal.footprint.africa/apply"
+                href="https://apply.plant-rmf.org.za"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white/20 font-bold rounded-md text-lg transition-colors shadow-lg"

@@ -249,7 +249,7 @@ export default function OurTeam() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="mailto:admin@rmf.org.za"
+                href="mailto:admin@plant-rmf.org.za"
                 className="px-6 py-3 bg-white text-green-700 rounded-md hover:bg-gray-100 transition-colors font-medium"
               >
                 Contact Us

@@ -40,11 +40,11 @@ export default function TermsAndConditions() {
               These Terms and Conditions of Use (&quot;Terms of Use&quot;) apply
               to the entire contents of the{" "}
               <strong>Food & Trees for Africa (&apos;FTFA&quot;)</strong>{" "}
-              website located at www.trees.org.za and all associated sites
-              linked to www.trees.org.za by FTFA, its affiliates and/or other
-              websites owned by FTFA and any/all downloaded or streamed content
-              or email correspondence between us and you (collectively referred
-              to as the &quot;Site&quot;).
+              website located at www.plant-rmf.org.za and all associated sites
+              linked to www.plant-rmf.org.za by FTFA, its affiliates and/or
+              other websites owned by FTFA and any/all downloaded or streamed
+              content or email correspondence between us and you (collectively
+              referred to as the &quot;Site&quot;).
             </p>
 
             <h2 className="text-2xl font-bold mt-8 mb-4">1. User agreement</h2>
@@ -250,7 +250,7 @@ export default function TermsAndConditions() {
                 Contact Us
               </Link>
               <a
-                href="https://donate.trees.org.za/"
+                href="https://donate.plant-rmf.org.za/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-white text-green-700 border border-green-700 rounded-md hover:bg-green-50 transition-colors"

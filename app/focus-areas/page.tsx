@@ -314,7 +314,7 @@ export default function FocusAreas() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="https://donate.trees.org.za/"
+                href="https://donate.plant-rmf.org.za/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-white text-green-700 rounded-md hover:bg-gray-100 transition-colors font-medium"
@@ -322,7 +322,7 @@ export default function FocusAreas() {
                 Donate Now
               </a>
               <a
-                href="https://portal.footprint.africa/apply"
+                href="https://apply.plant-rmf.org.za"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-md hover:bg-white/10 transition-colors font-medium"
