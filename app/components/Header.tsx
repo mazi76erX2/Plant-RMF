@@ -247,30 +247,48 @@ const Header = () => {
                   Contact
                 </Link>
               </div>
-              <a
-                href="https://donate.plant-rmf.org.za/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`px-5 py-2 rounded-md transition-colors shadow-md ${
-                  scrolled
-                    ? "bg-white text-green-700 hover:bg-gray-100 border-2 border-green-700"
-                    : "bg-white text-green-700 hover:bg-gray-100 border-2 border-white"
-                } font-medium`}
-              >
-                Donate
-              </a>
-              <a
-                href="https://apply.plant-rmf.org.za"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`px-5 py-2 rounded-md transition-colors border-2 shadow-md ${
-                  scrolled
-                    ? "border-green-700 text-green-700 hover:bg-green-50 bg-white"
-                    : "border-white text-white hover:bg-white/20"
-                } font-medium`}
-              >
-                Apply
-              </a>
+              <div className="hidden md:flex items-center ml-8 space-x-4">
+                <Link
+                  href="/donate"
+                  className="inline-block px-5 py-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 rounded-md font-medium transition-colors flex items-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 mr-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  Donate
+                </Link>
+                <Link
+                  href="/apply"
+                  className="inline-block px-5 py-2 bg-transparent border-2 border-white text-white hover:bg-white/10 rounded-md font-medium transition-colors flex items-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 mr-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                    />
+                  </svg>
+                  Apply
+                </Link>
+              </div>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -349,22 +367,48 @@ const Header = () => {
                 >
                   Contact
                 </Link>
-                <a
-                  href="https://donate.plant-rmf.org.za/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-5 py-2 bg-green-700 text-white rounded-md text-center hover:bg-green-800 transition-colors font-medium"
-                >
-                  Donate
-                </a>
-                <a
-                  href="https://apply.plant-rmf.org.za"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-5 py-2 border-2 border-green-700 text-green-700 rounded-md text-center hover:bg-green-50 transition-colors font-medium"
-                >
-                  Apply
-                </a>
+                <div className="grid grid-cols-1 gap-2 mt-4">
+                  <Link
+                    href="/donate"
+                    className="block px-4 py-2 text-center bg-yellow-500 hover:bg-yellow-600 text-gray-900 rounded-md font-medium transition-colors flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    Donate
+                  </Link>
+                  <Link
+                    href="/apply"
+                    className="block px-4 py-2 text-center border border-white text-white hover:bg-white/10 rounded-md font-medium transition-colors flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                      />
+                    </svg>
+                    Apply
+                  </Link>
+                </div>
               </nav>
             </div>
           </div>
