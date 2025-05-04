@@ -1,18 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("Thank you for subscribing to our newsletter!");
-    setEmail("");
-  };
-
   return (
     <footer className="bg-green-900 text-white">
       <div className="container mx-auto py-12 px-4">
