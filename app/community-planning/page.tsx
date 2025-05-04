@@ -396,6 +396,209 @@ export default function CommunityPlanning() {
           </div>
         </div>
       </section>
+
+      {/* Trees for Homes and Urban Greening Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            className="text-3xl font-bold mb-8 text-center text-gray-800"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            Trees for Homes and Urban Greening Project
+          </motion.h2>
+
+          <motion.p
+            className="text-lg text-gray-700 mb-10 max-w-4xl mx-auto text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+          >
+            Our flagship initiative combines community engagement with
+            environmental restoration, bringing trees and sustainable green
+            spaces to urban communities throughout South Africa.
+          </motion.p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <motion.div
+              className="bg-gray-50 rounded-lg p-6 shadow-lg"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="aspect-video relative mb-6 overflow-hidden rounded-lg">
+                <Image
+                  src="/tree-plant1.jpg"
+                  alt="Trees for Homes Project"
+                  fill
+                  className="object-cover object-center hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-gray-800">
+                Trees for Homes
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Our Trees for Homes program focuses on residential greening,
+                providing trees to homeowners and communities in underserved
+                areas. This initiative not only beautifies neighborhoods but
+                also improves air quality, provides shade, and creates habitat
+                for urban wildlife.
+              </p>
+              <ul className="text-gray-700 space-y-2 mb-4">
+                <li className="flex items-start">
+                  <svg
+                    className="h-5 w-5 text-green-600 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Distribution of indigenous shade trees to homes
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="h-5 w-5 text-green-600 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Training in tree planting and maintenance
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="h-5 w-5 text-green-600 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Community-based monitoring and evaluation
+                </li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              className="bg-gray-50 rounded-lg p-6 shadow-lg"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <div className="aspect-video relative mb-6 overflow-hidden rounded-lg">
+                <Image
+                  src="/tree-plant3.jpg"
+                  alt="Urban Greening Project"
+                  fill
+                  className="object-cover object-center hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-gray-800">
+                Urban Greening
+              </h3>
+              <p className="text-gray-700 mb-4">
+                The Urban Greening component targets public spaces, schools,
+                clinics, and community centers, transforming them into vibrant
+                green hubs. We work with local municipalities and community
+                organizations to identify priority areas for intervention.
+              </p>
+              <ul className="text-gray-700 space-y-2 mb-4">
+                <li className="flex items-start">
+                  <svg
+                    className="h-5 w-5 text-green-600 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Creation of community parks and green corridors
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="h-5 w-5 text-green-600 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  School greening and outdoor classroom development
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="h-5 w-5 text-green-600 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Integration of urban agriculture and food forests
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+
+          <motion.div
+            className="mt-12 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <Link
+              href="/contact"
+              className="inline-block px-6 py-3 bg-green-700 text-white rounded-md hover:bg-green-800 transition-colors font-medium"
+            >
+              Learn How to Participate
+            </Link>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
