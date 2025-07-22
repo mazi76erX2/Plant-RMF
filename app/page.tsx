@@ -57,10 +57,13 @@ export default function Home() {
             Robert Mazibuko Foundation
           </h2>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-6">
-            Planet, People, Prosperity
+            Sustainable prosperity driven by caring for the planet and its
+            people
           </p>
           <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10">
-            It is nice to meet you
+            We seek to actively pursue initiatives that promote a circular
+            economy, reduce carbon footprint, and contribute to a healthier
+            planet for future generations
           </p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
@@ -100,6 +103,18 @@ export default function Home() {
             </svg>
           </motion.div>
         </motion.div>
+      </section>
+
+      {/* Professional Summary Section */}
+      <section className="py-12 bg-white border-b">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">Professional Summary</h2>
+            <p className="text-lg text-gray-700">
+              With over 5 years of experience in full-stack and backend engineering, I bring deep technical expertise in Python, JavaScript, AWS, and frameworks like Django and FastAPI. I’ve designed and implemented scalable systems, mentored developers, and led high-impact projects. I thrive in balancing hands-on coding with architectural strategy and team leadership.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Introduction Section */}

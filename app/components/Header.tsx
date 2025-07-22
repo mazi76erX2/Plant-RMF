@@ -213,14 +213,26 @@ const Header = () => {
               </div>
               <div className="relative group">
                 <Link
-                  href="/community-planning"
+                  href="/tree-planting-business"
                   className={`transition-colors ${
                     scrolled
                       ? "text-gray-800 hover:text-green-700"
                       : "text-white hover:text-gray-200"
                   } font-medium`}
                 >
-                  Community Planning
+                  Tree Planting Business
+                </Link>
+              </div>
+              <div className="relative group">
+                <Link
+                  href="/business-packages"
+                  className={`transition-colors ${
+                    scrolled
+                      ? "text-gray-800 hover:text-green-700"
+                      : "text-white hover:text-gray-200"
+                  } font-medium`}
+                >
+                  Business Packages
                 </Link>
               </div>
               <div className="relative group">
@@ -350,10 +362,16 @@ const Header = () => {
                   Focus Areas
                 </Link>
                 <Link
-                  href="/community-planning"
+                  href="/tree-planting-business"
                   className="text-gray-800 hover:text-green-700 transition-colors block font-medium"
                 >
-                  Community Planning
+                  Tree Planting Business
+                </Link>
+                <Link
+                  href="/business-packages"
+                  className="text-gray-800 hover:text-green-700 transition-colors block font-medium"
+                >
+                  Business Packages
                 </Link>
                 <Link
                   href="/our-team"

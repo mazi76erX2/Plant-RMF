@@ -4,18 +4,56 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useMutation } from "@tanstack/react-query";
+
+// Contact form data type
+interface ContactFormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+// API function to submit contact form
+const submitContactForm = async (formData: ContactFormData): Promise<{ success: boolean; message: string }> => {
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  });
+
+  const data = await response.json();
+  
+  if (!response.ok) {
+    throw new Error(data.message || 'Failed to submit contact form');
+  }
+  
+  return data;
+};
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  // Use React Query mutation for form submission
+  const contactMutation = useMutation({
+    mutationFn: submitContactForm,
+    onSuccess: (data) => {
+      // Reset form on success
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    },
+  });
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -29,25 +67,10 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setErrorMessage("");
-
-    try {
-      const response = await fetch("/api/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setIsSubmitted(true);
-        setFormData({
+    contactMutation.mutate(formData);
+  };
           name: "",
           email: "",
           subject: "",

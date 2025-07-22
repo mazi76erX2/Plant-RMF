@@ -39,6 +39,18 @@ export default function CommunityPlanning() {
         </motion.div>
       </section>
 
+      {/* Professional Summary Section */}
+      <section className="py-12 bg-white border-b">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">Professional Summary</h2>
+            <p className="text-lg text-gray-700">
+              With over 5 years of experience in full-stack and backend engineering, I bring deep technical expertise in Python, JavaScript, AWS, and frameworks like Django and FastAPI. I’ve designed and implemented scalable systems, mentored developers, and led high-impact projects. I thrive in balancing hands-on coding with architectural strategy and team leadership.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Introduction Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">

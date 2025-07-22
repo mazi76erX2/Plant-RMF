@@ -246,11 +246,37 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-green-700 text-center">
-          <p>
-            &copy; {new Date().getFullYear()} Robert Mazibuko Foundation. All
-            rights reserved.
-          </p>
+        <div className="mt-8 pt-8 border-t border-green-700">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+            <div>
+              <h4 className="text-lg font-bold mb-3 text-green-300">
+                Legal | Compliance
+              </h4>
+              <ul className="space-y-1 text-sm text-gray-300">
+                <li>Robert Mazibuko Foundation</li>
+                <li>Registration Number: 314-347 NPO</li>
+                <li>Registration Date: 05 November 2024</li>
+                <li>PBO Number: Application Pending</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-bold mb-3 text-green-300">
+                Contact Information
+              </h4>
+              <ul className="space-y-1 text-sm text-gray-300">
+                <li>Cnr. Thaba Busiu & Lebombo Streets</li>
+                <li>Kwa-Guqa Ext. 2, Mpumalanga</li>
+                <li>South Africa, 1073</li>
+                <li>+27 82 597 0232</li>
+              </ul>
+            </div>
+          </div>
+          <div className="text-center">
+            <p>
+              &copy; {new Date().getFullYear()} Robert Mazibuko Foundation. All
+              rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
