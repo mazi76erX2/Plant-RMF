@@ -39,18 +39,6 @@ export default function CommunityPlanning() {
         </motion.div>
       </section>
 
-      {/* Professional Summary Section */}
-      <section className="py-12 bg-white border-b">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-4 text-gray-900">Professional Summary</h2>
-            <p className="text-lg text-gray-700">
-              With over 5 years of experience in full-stack and backend engineering, I bring deep technical expertise in Python, JavaScript, AWS, and frameworks like Django and FastAPI. I’ve designed and implemented scalable systems, mentored developers, and led high-impact projects. I thrive in balancing hands-on coding with architectural strategy and team leadership.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Introduction Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -65,7 +53,7 @@ export default function CommunityPlanning() {
                 Our Approach to Community Planning
               </h2>
               <p className="text-lg text-gray-700 mb-8">
-                At the Robert Mazibuko Foundation, we believe that sustainable
+                At the Robert Mazibuko Foundation (RMF), we believe that sustainable
                 community development begins with thoughtful planning and local
                 participation. Our community planning initiatives focus on
                 creating green spaces, food security, and sustainable
@@ -320,7 +308,7 @@ export default function CommunityPlanning() {
                     d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                Donate Now
+                JOIN
               </Link>
               <Link
                 href="/apply"
@@ -340,7 +328,7 @@ export default function CommunityPlanning() {
                     d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
                   />
                 </svg>
-                Apply For Support
+                JOIN
               </Link>
             </div>
           </motion.div>

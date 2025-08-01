@@ -19,7 +19,7 @@ const teamMembers: TeamMember[] = [
     credentials: "CM(SA)",
     role: "Founder and Chairman | Interim Chief Executive Officer",
     image: "/robert.jpeg",
-    bio: "Robert is the visionary founder of the Robert Mazibuko Foundation, dedicated to creating sustainable prosperity through environmental conservation.",
+    bio: "Robert is the visionary founder of the Robert Mazibuko Foundation (RMF) (RMF), dedicated to creating sustainable prosperity through environmental conservation.",
     email: "robert@plant-rmf.co.za",
   },
   {

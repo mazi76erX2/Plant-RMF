@@ -255,7 +255,7 @@ export default function TermsAndConditions() {
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-white text-green-700 border border-green-700 rounded-md hover:bg-green-50 transition-colors"
               >
-                Donate
+                JOIN
               </a>
             </div>
           </div>

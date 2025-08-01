@@ -51,20 +51,12 @@ export default function Home() {
           transition={{ duration: 1, delay: 0.2 }}
         >
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Plant
+            PLANT
           </h1>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Robert Mazibuko Foundation
+            Robert Mazibuko Foundation (RMF)
           </h2>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-6">
-            Sustainable prosperity driven by caring for the planet and its
-            people
-          </p>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10">
-            We seek to actively pursue initiatives that promote a circular
-            economy, reduce carbon footprint, and contribute to a healthier
-            planet for future generations
-          </p>
+
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               href="/about"
@@ -105,18 +97,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Professional Summary Section */}
-      <section className="py-12 bg-white border-b">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-4 text-gray-900">Professional Summary</h2>
-            <p className="text-lg text-gray-700">
-              With over 5 years of experience in full-stack and backend engineering, I bring deep technical expertise in Python, JavaScript, AWS, and frameworks like Django and FastAPI. I’ve designed and implemented scalable systems, mentored developers, and led high-impact projects. I thrive in balancing hands-on coding with architectural strategy and team leadership.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Introduction Section */}
       <section className="w-full py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -131,13 +111,13 @@ export default function Home() {
               Our Goal at PLANT
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We aim to improve the world we live in by enabling people to
+              We aim to improve the world we live in by enabling <em>people</em> to
               easily PLANT trees, absorb their carbon footprint and have a more
               sustainable lifestyle, and by helping organisations spread the
               word about their sustainable products and services.
             </p>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
-              PLANT is ready to fight for our planet and people. PLANT would
+              PLANT is ready to fight for our planet and <em>people</em>. PLANT would
               love it if you were to join us.
             </p>
           </motion.div>
@@ -232,10 +212,10 @@ export default function Home() {
               Our Values
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              At the Robert Mazibuko Foundation, we&apos;re guided by core
+              At the Robert Mazibuko Foundation (RMF), we&apos;re guided by core
               values that shape everything we do.
             </p>
-          </motion.div>
+          </motion.div>s
 
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
@@ -249,14 +229,14 @@ export default function Home() {
               variants={fadeInUp}
             >
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-gray-800">Plant</h3>
+                <h3 className="text-xl font-bold mb-3 text-gray-800"><em>Plant</em></h3>
                 <p className="text-gray-600 mb-4">
-                  We want to PLANT millions of trees a day. This is a mammoth
+                  We want to PLANT millions of trees a year. This is a mammoth
                   task. Urgent and significant change is required to solve the
                   problem of deforestation, carbon footprint and reverse climate
                   change. We need everyone to PLANT. Taking the first step is
                   the biggest challenge.
-                </p>
+                </p>s
               </div>
             </motion.div>
 
@@ -304,7 +284,7 @@ export default function Home() {
             >
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-gray-800">
-                  Inclusivity and Empowerment
+                  Inclusivity
                 </h3>
                 <p className="text-gray-600 mb-4">
                   We want to emphasise the practice and policy of being
@@ -388,7 +368,7 @@ export default function Home() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  Annual triple-bottom line reporting (planet, people, profit)
+                  Annual triple-bottom line reporting (planet, <em>people</em>, profit)
                 </li>
                 <li className="flex items-start">
                   <svg
@@ -535,7 +515,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-block px-8 py-4 bg-white hover:bg-gray-100 text-green-700 font-bold rounded-md text-lg transition-colors shadow-lg border-2 border-white"
               >
-                Donate Now
+                JOIN
               </a>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

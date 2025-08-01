@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useMutation } from "@tanstack/react-query";
@@ -40,6 +39,9 @@ export default function Contact() {
     subject: "",
     message: "",
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   // Use React Query mutation for form submission
   const contactMutation = useMutation({
@@ -71,56 +73,20 @@ export default function Contact() {
     e.preventDefault();
     contactMutation.mutate(formData);
   };
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
-      } else {
-        setErrorMessage(
-          data.error || "Failed to send message. Please try again."
-        );
-      }
-    } catch (error) {
-      setErrorMessage("An error occurred. Please try again later.");
-      console.error("Form submission error:", error);
-    } finally {
-      setIsSubmitting(false);
-
-      // Reset submission status after 5 seconds
-      if (isSubmitted) {
-        setTimeout(() => {
-          setIsSubmitted(false);
-        }, 5000);
-      }
-    }
-  };
 
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/tree-planting.jpg"
-            alt="Contact Us"
-            fill
-            sizes="100vw"
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-        </div>
-
+      <section className="bg-gray-900 py-24 flex items-center justify-center">
         <motion.div
-          className="container mx-auto px-4 relative z-10 text-center text-white"
+          className="container mx-auto px-4 text-center text-white"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-10">
-            Get in touch with the Robert Mazibuko Foundation team
+            Get in touch with the Robert Mazibuko Foundation (RMF) team
           </p>
         </motion.div>
       </section>
@@ -173,8 +139,9 @@ export default function Contact() {
                       Address
                     </h3>
                     <p className="text-gray-600">
-                      4316 Willie Ackerman Drive, Kwa-Guqa, Mpumalanga, 1039,
-                      South Africa
+                      Cnr. Thaba Busiu & Lebombo Street<br/>
+                      Kwa-Guqa Ext. 2, Mpumalanga<br/>
+                      South Africa, 1073
                     </p>
                   </div>
                 </div>
@@ -228,10 +195,6 @@ export default function Contact() {
                       Email
                     </h3>
                     <p className="text-gray-600">
-                      <a href="mailto:robert@plant-rmf.co.za">
-                        robert@plant-rmf.co.za
-                      </a>
-                      <br />
                       <a href="mailto:admin@plant-rmf.co.za">
                         admin@plant-rmf.co.za
                       </a>
@@ -489,23 +452,37 @@ export default function Contact() {
       {/* Map Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">
-              Find Us
-            </h2>
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-96">
-              {/* Google Maps iframe */}
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">Find Us</h2>
+            <p className="text-gray-600">
+              Visit us at our location in Kwa-Guqa, Mpumalanga
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14438.775901479553!2d29.23102566303919!3d-25.85989489999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9505fdf28fe79d%3A0x827fecbd759ebbbb!2sKwa-Guqa%2C%20Emalahleni%2C%201039%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1658346258963!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.567789!2d29.160!3d-25.855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9505fdf28fe79d%3A0x827fecbd759ebbbb!2s13%20Lebombo%20Street%2C%20Kwa-Guqa%20Ext%202%2C%20Mpumalanga%2C%201073!5e0!3m2!1sen!2sza!4v1625097600000!5m2!1sen!2sza"
                 width="100%"
-                height="100%"
+                height="400"
                 style={{ border: 0 }}
-                allowFullScreen
+                allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Robert Mazibuko Foundation Location"
-                aria-label="Map showing the location of Robert Mazibuko Foundation"
               ></iframe>
+            </div>
+            <div className="mt-6 text-center">
+              <p className="text-gray-600 mb-2">
+                <strong>Address:</strong> Cnr. Thaba Busiu & Lebombo Street, Kwa-Guqa Ext. 2, Mpumalanga, South Africa, 1073
+              </p>
+              <a
+                href="https://maps.google.com/?q=13+Lebombo+Street,+Kwa-Guqa+Ext.+2,+Mpumalanga,+South+Africa,+1073"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-green-700 hover:bg-green-800 text-white px-6 py-2 rounded-md font-medium transition-colors"
+              >
+                Open in Google Maps
+              </a>
             </div>
           </div>
         </div>
@@ -526,21 +503,11 @@ export default function Contact() {
               href="/donate"
               className="px-6 py-3 bg-white text-green-700 rounded-md hover:bg-gray-100 transition-colors font-medium flex items-center"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 mr-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" className="mr-2">
+                <circle cx="10" cy="10" r="8" fill="lightgray" stroke="black" strokeWidth="1"/>
+                <text x="10" y="13" fontFamily="Verdana" fontSize="10" fill="black" textAnchor="middle">R</text>
               </svg>
-              Donate Now
+              JOIN
             </Link>
             <Link
               href="/apply"

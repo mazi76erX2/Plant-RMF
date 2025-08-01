@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Header = () => {
@@ -163,15 +163,15 @@ const Header = () => {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex-shrink-0">
-              <Image
-                src="/logo-tree.svg"
-                alt="Robert Mazibuko Foundation"
-                width={150}
-                height={50}
-                className="h-12 w-auto"
-              />
-            </Link>
+                          <Link href="/" className="flex-shrink-0">
+                <Image
+                  src="/logo.svg"
+                  alt="Robert Mazibuko Foundation (RMF)"
+                  width={150}
+                  height={50}
+                  className="h-12 w-auto"
+                />
+              </Link>
 
             {/* Main Navigation - Desktop */}
             <nav className="hidden lg:flex items-center space-x-8">
@@ -187,30 +187,8 @@ const Header = () => {
                   About
                 </Link>
               </div>
-              <div className="relative group">
-                <Link
-                  href="/trees-carbon"
-                  className={`transition-colors ${
-                    scrolled
-                      ? "text-gray-800 hover:text-green-700"
-                      : "text-white hover:text-gray-200"
-                  } font-medium`}
-                >
-                  Trees & Carbon
-                </Link>
-              </div>
-              <div className="relative group">
-                <Link
-                  href="/focus-areas"
-                  className={`transition-colors ${
-                    scrolled
-                      ? "text-gray-800 hover:text-green-700"
-                      : "text-white hover:text-gray-200"
-                  } font-medium`}
-                >
-                  Focus Areas
-                </Link>
-              </div>
+
+
               <div className="relative group">
                 <Link
                   href="/tree-planting-business"
@@ -264,21 +242,11 @@ const Header = () => {
                   href="/donate"
                   className="inline-block px-5 py-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 rounded-md font-medium transition-colors flex items-center"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 mr-2 inline-flex"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
+                  <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" className="mr-2 inline-flex">
+                    <circle cx="10" cy="10" r="8" fill="lightgray" stroke="black" strokeWidth="1"/>
+                    <text x="10" y="13" fontFamily="Verdana" fontSize="10" fill="black" textAnchor="middle">R</text>
                   </svg>
-                  <span className="flex-shrink-0">Donate</span>
+                  <span className="flex-shrink-0">JOIN</span>
                 </Link>
                 <Link
                   href="/apply"
@@ -349,18 +317,8 @@ const Header = () => {
                 >
                   About
                 </Link>
-                <Link
-                  href="/trees-carbon"
-                  className="text-gray-800 hover:text-green-700 transition-colors block font-medium"
-                >
-                  Trees & Carbon
-                </Link>
-                <Link
-                  href="/focus-areas"
-                  className="text-gray-800 hover:text-green-700 transition-colors block font-medium"
-                >
-                  Focus Areas
-                </Link>
+
+
                 <Link
                   href="/tree-planting-business"
                   className="text-gray-800 hover:text-green-700 transition-colors block font-medium"
@@ -390,21 +348,11 @@ const Header = () => {
                     href="/donate"
                     className="block px-4 py-2 text-center bg-yellow-500 hover:bg-yellow-600 text-gray-900 rounded-md font-medium transition-colors flex items-center justify-center"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 mr-2 inline-flex"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" className="mr-2 inline-flex">
+                      <circle cx="10" cy="10" r="8" fill="lightgray" stroke="black" strokeWidth="1"/>
+                      <text x="10" y="13" fontFamily="Verdana" fontSize="10" fill="black" textAnchor="middle">R</text>
                     </svg>
-                    <span className="flex-shrink-0">Donate</span>
+                    <span className="flex-shrink-0">JOIN</span>
                   </Link>
                   <Link
                     href="/apply"

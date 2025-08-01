@@ -8,12 +8,12 @@ import QueryProvider from "./providers/QueryProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Robert Mazibuko Foundation",
+  title: "Robert Mazibuko Foundation (RMF)",
   description:
-    "Growing sustainable communities through environmental education and tree planting initiatives across South Africa.",
+    "People | Planet | Prosperity",
   icons: {
-    icon: "/logo-tree.svg",
-    apple: "/logo-tree.svg",
+    icon: "/logo.svg",
+    apple: "/logo.svg",
   },
 };
 

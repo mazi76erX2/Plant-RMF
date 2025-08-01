@@ -58,14 +58,6 @@ export default function OurTeam() {
       {/* Hero Section */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/tree-plants.jpeg"
-            alt="Our Team"
-            fill
-            sizes="100vw"
-            className="object-cover"
-            priority
-          />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
 
@@ -202,7 +194,7 @@ export default function OurTeam() {
                     />
                   </svg>
                   <span>
-                    <strong>Organization:</strong> Robert Mazibuko Foundation
+                    <strong>Organization:</strong> Robert Mazibuko Foundation (RMF)
                   </span>
                 </li>
                 <li className="flex items-start">

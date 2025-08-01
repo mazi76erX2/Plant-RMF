@@ -213,7 +213,7 @@ export default function DonatePage() {
 
                   <div className="text-gray-600 mb-8">
                     <p className="mb-4">
-                      Thank you for supporting the Robert Mazibuko Foundation.
+                      Thank you for supporting the Robert Mazibuko Foundation (RMF).
                     </p>
                     <p className="mb-4">
                       You have the option to support any of our programmes. If
@@ -229,7 +229,8 @@ export default function DonatePage() {
                   <button
                     type="button"
                     onClick={nextStep}
-                    disabled={isLoading}
+                    // disabled={isLoading}
+                    disabled={true}
                     className="w-full py-3 px-4 bg-green-700 text-white rounded-md font-medium hover:bg-green-800 transition flex items-center justify-center"
                   >
                     {isLoading ? (
@@ -254,7 +255,7 @@ export default function DonatePage() {
                         ></path>
                       </svg>
                     ) : null}
-                    Go to step 2
+                    Coming Soon
                   </button>
                 </motion.div>
               )}
@@ -554,7 +555,7 @@ export default function DonatePage() {
           <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">
             Your Donation Makes a Difference
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
                 <svg
@@ -603,32 +604,6 @@ export default function DonatePage() {
               <p className="text-gray-600">
                 Every R200 donated plants a tree, contributing to reforestation
                 efforts and combating climate change across South Africa.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-green-700"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">
-                Education Programs
-              </h3>
-              <p className="text-gray-600">
-                Support our educational initiatives that teach sustainable
-                environmental practices and conservation to communities and
-                schools.
               </p>
             </div>
           </div>

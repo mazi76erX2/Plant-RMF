@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 // Contact form data type
 interface ContactFormData {
@@ -25,16 +26,48 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Here you would typically:
-    // 1. Save to database
-    // 2. Send email notification
-    // 3. Add to CRM system
-    // 4. Send auto-reply to user
+    // Create nodemailer transporter
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST || "smtp.gmail.com",
+      port: parseInt(process.env.SMTP_PORT || "587"),
+      secure: false, // Use TLS
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
 
-    console.log("Contact form submission:", data);
+    // Email content
+    const emailHtml = `
+      <h2>New Contact Form Submission</h2>
+      <p><strong>Name:</strong> ${data.name}</p>
+      <p><strong>Email:</strong> ${data.email}</p>
+      ${data.phone ? `<p><strong>Phone:</strong> ${data.phone}</p>` : ''}
+      <p><strong>Subject:</strong> ${data.subject}</p>
+      ${data.packageInterest ? `<p><strong>Package Interest:</strong> ${data.packageInterest}</p>` : ''}
+      <p><strong>Message:</strong></p>
+      <p style="white-space: pre-wrap;">${data.message}</p>
+      <hr>
+      <p><small>Submitted on: ${new Date().toLocaleString()}</small></p>
+    `;
 
-    // Simulate processing time
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // Send email to both addresses
+    const recipients = ['admin@plant-rmf.co.za', 'mdlophe@gmail.com'];
+    
+    try {
+      await transporter.sendMail({
+        from: process.env.SMTP_FROM || 'noreply@plant-rmf.co.za',
+        to: recipients,
+        subject: `Contact Form: ${data.subject}`,
+        html: emailHtml,
+        replyTo: data.email,
+      });
+
+      console.log("Contact form submission sent to:", recipients);
+    } catch (emailError) {
+      console.error("Failed to send email:", emailError);
+      // Continue processing even if email fails - you may want to save to database as fallback
+    }
 
     return NextResponse.json({
       success: true,

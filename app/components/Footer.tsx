@@ -9,12 +9,11 @@ const Footer = () => {
       <div className="container mx-auto py-12 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">
-              Robert Mazibuko Foundation
+            <h3 className="text-xl font-bold mb-4">
+              Robert Mazibuko Foundation (RMF)
             </h3>
             <p className="mb-4">
-              Growing sustainable communities through environmental education
-              and tree planting initiatives across South Africa.
+              People | Planet | Prosperity
             </p>
             <div className="flex space-x-4">
               <a
@@ -96,11 +95,7 @@ const Footer = () => {
                   About Us
                 </Link>
               </li>
-              <li>
-                <Link href="/focus-areas" className="hover:text-green-300">
-                  Focus Areas
-                </Link>
-              </li>
+
               <li>
                 <Link href="/our-team" className="hover:text-green-300">
                   Our Team
@@ -123,43 +118,15 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-4">Focus Areas</h3>
+            <h3 className="text-xl font-bold mb-4">Legal | Compliance</h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/focus-areas#education"
-                  className="hover:text-green-300"
-                >
-                  Environmental Education
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/focus-areas#planting"
-                  className="hover:text-green-300"
-                >
-                  Tree Planting
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/focus-areas#conservation"
-                  className="hover:text-green-300"
-                >
-                  Conservation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/focus-areas#community"
-                  className="hover:text-green-300"
-                >
-                  Community Development
-                </Link>
-              </li>
+              <li>Robert Mazibuko Foundation (RMF)</li>
+              <li>Registration Number: 314-347 NPO</li>
+              <li>Registration Date: 05 November 2024</li>
+              <li>PBO Number: Application Pending</li>
               <li>
                 <Link href="/donate" className="hover:text-green-300">
-                  Support Our Work
+                  JOIN
                 </Link>
               </li>
             </ul>
@@ -181,7 +148,9 @@ const Footer = () => {
                   />
                 </svg>
                 <span>
-                  4316 Willie Ackerman Drive, Kwa-Guqa, Mpumalanga, 1039
+                  Cnr. Thaba Busiu & Lebombo Streets
+                  Kwa-Guqa Ext. 2, Mpumalanga
+                  South Africa, 1073
                 </span>
               </li>
               <li className="flex items-center">
@@ -206,13 +175,6 @@ const Footer = () => {
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
                 <span>
-                  <a
-                    href="mailto:robert@plant-rmf.co.za"
-                    className="hover:text-green-300"
-                  >
-                    robert@plant-rmf.co.za
-                  </a>{" "}
-                  |
                   <a
                     href="mailto:admin@plant-rmf.co.za"
                     className="hover:text-green-300 ml-1"
@@ -246,38 +208,6 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-green-700">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-            <div>
-              <h4 className="text-lg font-bold mb-3 text-green-300">
-                Legal | Compliance
-              </h4>
-              <ul className="space-y-1 text-sm text-gray-300">
-                <li>Robert Mazibuko Foundation</li>
-                <li>Registration Number: 314-347 NPO</li>
-                <li>Registration Date: 05 November 2024</li>
-                <li>PBO Number: Application Pending</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-bold mb-3 text-green-300">
-                Contact Information
-              </h4>
-              <ul className="space-y-1 text-sm text-gray-300">
-                <li>Cnr. Thaba Busiu & Lebombo Streets</li>
-                <li>Kwa-Guqa Ext. 2, Mpumalanga</li>
-                <li>South Africa, 1073</li>
-                <li>+27 82 597 0232</li>
-              </ul>
-            </div>
-          </div>
-          <div className="text-center">
-            <p>
-              &copy; {new Date().getFullYear()} Robert Mazibuko Foundation. All
-              rights reserved.
-            </p>
-          </div>
-        </div>
       </div>
     </footer>
   );

@@ -86,7 +86,9 @@ export default function ContactUs() {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Address</h3>
                     <p className="text-gray-700">
-                      94 Bessemer Street, Wendywood, 2090, Sandton, Gauteng
+                      Cnr. Thaba Busiu & Lebombo Street<br/>
+                      Kwa-Guqa Ext. 2, Mpumalanga<br/>
+                      South Africa, 1073
                     </p>
                   </div>
                 </div>
@@ -109,7 +111,7 @@ export default function ContactUs() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Telephone</h3>
-                    <p className="text-gray-700">+27 11 656 9802/3</p>
+                    <p className="text-gray-700">+27 82 597 0232</p>
                   </div>
                 </div>
 
@@ -131,31 +133,11 @@ export default function ContactUs() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email</h3>
-                    <p className="text-gray-700">info@plant-rmf.org.za</p>
+                    <p className="text-gray-700">admin@plant-rmf.co.za</p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="bg-primary/10 p-3 rounded-full mr-4">
-                    <svg
-                      className="w-6 h-6 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-1">Fax</h3>
-                    <p className="text-gray-700">+27 11 656 6987</p>
-                  </div>
-                </div>
+
               </div>
 
               <div className="mt-12">
@@ -346,6 +328,45 @@ export default function ContactUs() {
                   </button>
                 </div>
               </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">Find Us</h2>
+            <p className="text-gray-600">
+              Visit us at our location in Kwa-Guqa, Mpumalanga
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.567789!2d29.160!3d-25.855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9505fdf28fe79d%3A0x827fecbd759ebbbb!2s13%20Lebombo%20Street%2C%20Kwa-Guqa%20Ext%202%2C%20Mpumalanga%2C%201073!5e0!3m2!1sen!2sza!4v1625097600000!5m2!1sen!2sza"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Robert Mazibuko Foundation Location"
+              ></iframe>
+            </div>
+            <div className="mt-6 text-center">
+              <p className="text-gray-600 mb-2">
+                <strong>Address:</strong> Cnr. Thaba Busiu & Lebombo Street, Kwa-Guqa Ext. 2, Mpumalanga, South Africa, 1073
+              </p>
+              <a
+                href="https://maps.google.com/?q=13+Lebombo+Street,+Kwa-Guqa+Ext.+2,+Mpumalanga,+South+Africa,+1073"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-md font-medium transition-colors"
+              >
+                Open in Google Maps
+              </a>
             </div>
           </div>
         </div>
