@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 // Tree statistics type
 interface TreeStats {
@@ -34,7 +34,7 @@ export async function GET() {
       success: true,
       data: updatedStats,
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       {
         success: false,

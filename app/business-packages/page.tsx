@@ -112,7 +112,7 @@ const BusinessPackages = () => {
               className="text-xl text-gray-600 max-w-3xl mx-auto"
               variants={fadeInUp}
             >
-              Select the package that best suits your company's commitment to environmental sustainability
+              Select the package that best suits your company&apos;s commitment to environmental sustainability
             </motion.p>
           </motion.div>
 
@@ -222,7 +222,7 @@ const BusinessPackages = () => {
                     {selectedPackage.name} Package Details
                   </h3>
                   <p className="text-xl text-center mb-8 text-gray-600">
-                    Let's plant {selectedPackage.treesPerMonth} trees together each month
+                    Let&apos;s plant {selectedPackage.treesPerMonth} trees together each month
                   </p>
 
                   <div className="grid md:grid-cols-2 gap-8">
@@ -307,7 +307,7 @@ const BusinessPackages = () => {
                   <li className="flex items-start">
                     <span className="text-green-600 mr-3 mt-1">✓</span>
                     Gain valuable examples of corporate social responsibility
-                    (CSI) reporting that will help you meet South Africa's and
+                    (CSI) reporting that will help you meet South Africa&apos;s and
                     United Nations Sustainability Development Goals
                   </li>
                   <li className="flex items-start">
@@ -412,7 +412,7 @@ const BusinessPackages = () => {
                 </h3>
                 <p className="text-gray-700">
                   Upon starting our collaboration, we will prepare for you a
-                  widget for your company's website showing the number of trees
+                  widget for your company&apos;s website showing the number of trees
                   planted, photos from our planting events, and annual reports
                   on the environmental impact of our cooperation.
                 </p>

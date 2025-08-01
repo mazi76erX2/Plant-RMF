@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
                 <strong>Last updated:</strong> {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
               </p>
               <p className="text-gray-700 leading-relaxed">
-                The Robert Mazibuko Foundation (RMF) ("we," "our," or "us") is committed to protecting your privacy. 
+                The Robert Mazibuko Foundation (RMF) (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. 
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you 
                 visit our website or use our services.
               </p>

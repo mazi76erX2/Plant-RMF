@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 // Team member type definition
 interface TeamMember {
@@ -46,7 +46,7 @@ export async function GET() {
       success: true,
       data: teamMembers,
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       {
         success: false,

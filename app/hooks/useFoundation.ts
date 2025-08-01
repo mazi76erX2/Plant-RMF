@@ -1,16 +1,16 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { api, API_ENDPOINTS } from "../lib/api";
 import {
-  TeamMember,
-  TreeStats,
-  BusinessPackage,
+  // TeamMember,
+  // TreeStats,
+  // BusinessPackage,
   ContactFormData,
   NewsletterSubscription,
   Donation,
-  ImpactReport,
-  Event,
-  ApiResponse,
-  PaginatedResponse,
+  // ImpactReport,
+  // Event,
+  // ApiResponse,
+  // PaginatedResponse,
 } from "../types/foundation";
 
 // Query Keys
@@ -82,8 +82,6 @@ export const useDonations = (page = 1, limit = 20) => {
 
 // Mutations
 export const useContactForm = () => {
-  const queryClient = useQueryClient();
-
   return useMutation({
     mutationFn: (data: ContactFormData) =>
       api.post(API_ENDPOINTS.CONTACT, data),
@@ -95,8 +93,6 @@ export const useContactForm = () => {
 };
 
 export const useNewsletterSubscription = () => {
-  const queryClient = useQueryClient();
-
   return useMutation({
     mutationFn: (data: NewsletterSubscription) =>
       api.post(API_ENDPOINTS.NEWSLETTER, data),

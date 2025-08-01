@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 // Business package type
 interface BusinessPackage {
@@ -74,7 +74,7 @@ export async function GET() {
       success: true,
       data: businessPackages,
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       {
         success: false,

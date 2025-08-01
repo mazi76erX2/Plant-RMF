@@ -30,7 +30,7 @@ export const api = {
   },
 
   // POST request
-  post: async (url: string, data: any) => {
+  post: async <T = unknown>(url: string, data: T) => {
     const response = await fetch(url, {
       method: "POST",
       headers: {
@@ -45,7 +45,7 @@ export const api = {
   },
 
   // PUT request
-  put: async (url: string, data: any) => {
+  put: async <T = unknown>(url: string, data: T) => {
     const response = await fetch(url, {
       method: "PUT",
       headers: {

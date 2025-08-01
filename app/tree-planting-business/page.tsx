@@ -264,11 +264,11 @@ const TreePlantingBusiness = () => {
               viewport={{ once: true, amount: 0.3 }}
             >
               <h3 className="text-2xl font-bold text-green-700 mb-6">
-                Better Company's Image
+                Better Company&apos;s Image
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 Participation in the tree planting program highlights the
-                company's commitment to environmental actions, translating into
+                company&apos;s commitment to environmental actions, translating into
                 a positive perception among customers and business partners.
               </p>
             </motion.div>

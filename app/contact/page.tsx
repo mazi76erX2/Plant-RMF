@@ -46,7 +46,7 @@ export default function Contact() {
   // Use React Query mutation for form submission
   const contactMutation = useMutation({
     mutationFn: submitContactForm,
-    onSuccess: (data) => {
+    onSuccess: () => {
       // Reset form on success
       setFormData({
         name: "",
@@ -54,6 +54,15 @@ export default function Contact() {
         subject: "",
         message: "",
       });
+      setIsSubmitted(true);
+      setErrorMessage(null);
+      // Reset success message after 5 seconds
+      setTimeout(() => setIsSubmitted(false), 5000);
+    },
+    onError: (error) => {
+      console.error("Contact form error:", error);
+      setErrorMessage(error.message || "Failed to send message. Please try again.");
+      setIsSubmitted(false);
     },
   });
 
@@ -71,7 +80,13 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    contactMutation.mutate(formData);
+    setIsSubmitting(true);
+    setErrorMessage(null);
+    contactMutation.mutate(formData, {
+      onSettled: () => {
+        setIsSubmitting(false);
+      },
+    });
   };
 
   return (
